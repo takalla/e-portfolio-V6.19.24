@@ -102,7 +102,7 @@ section:nth-child(even) {
 nav {
     height: 100px;
     width: 100%;
-    max-width: 1000px;
+    max-width: 1400px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -171,6 +171,7 @@ nav {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.16);
     margin-bottom: 28px;
     animation: animate-profile-picture 800ms 200ms backwards;
+    transition: all 200ms ease;
 }
 
 @keyframes animate-profile-picture {
@@ -187,11 +188,23 @@ nav {
 
 .about-me__picture {
     width: 100px;
+    transition: all 200ms ease;
 
     /* Improving my own picture  */
     transform: scale(1.5);
     padding-top: 8px;
 }
+
+.about-me__picture--mask:hover,
+.about-me__picture:hover {
+width: 500px;
+height: 500px;
+}
+
+.about-me__picture:hover {
+    transform: scale(1.3);
+    padding-top: 8px;
+    }
 
 .about-me__info--title {
     margin-bottom: 16px;
@@ -439,6 +452,7 @@ footer {
 .footer__logo--popper {
     position: absolute;
     left: 50%;
+    transform: translateX(-50%);
     top: 30px;
     font-weight: 700;
     opacity: 0;
@@ -451,7 +465,7 @@ footer {
 }
 
 .footer__anchor:hover .footer__logo--popper {
-    transform: translateY(-40px);
+    transform: translateX(-50%) translateY(-40px);
     opacity: 1;
 }
 
@@ -468,6 +482,12 @@ footer {
     .personal__logo {
         width: 116px;
         margin: 0;
+    }
+
+    .about-me__picture--mask:hover,
+    .about-me__picture:hover {
+        width: 350px;
+        height: 350px;
     }
 
     h1 {
@@ -506,6 +526,12 @@ footer {
 
     .nav__link:not(:last-child) {
         display: none;
+    }
+
+    .about-me__picture--mask:hover,
+    .about-me__picture:hover {
+        width: 250px;
+        height: 250px;
     }
 
     .project__description {
