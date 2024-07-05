@@ -156,7 +156,7 @@ nav {
 .about-me__info--container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     max-width: 600px;
     margin: 0 auto;
@@ -241,12 +241,14 @@ height: 500px;
 .about-me__img--container {
     flex: 1;
     display: flex;
-    align-items: center;
+    align-items: end;
+    justify-content: center;
     padding: 0  16px;
 }
 
 .about-me__img {
     width: 100%;
+    max-width: 600px;
     animation: fade-in 1200ms 800ms backwards;
 }
 
@@ -482,6 +484,14 @@ footer {
     .personal__logo {
         width: 116px;
         margin: 0;
+    }
+
+    .about-me__info {
+        padding-top: 32px;
+    }
+
+    .about-me__img--container {
+        align-items: center;
     }
 
     .about-me__picture--mask:hover,
