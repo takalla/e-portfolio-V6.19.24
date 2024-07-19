@@ -459,6 +459,10 @@ footer {
     color: #fff;
 }
 
+.footer__copyright {
+    opacity: 0.2;
+}
+
 .footer__logo--popper {
     position: absolute;
     left: 50%;
@@ -562,7 +566,8 @@ footer {
         display: none;
     }
 
-    .project__description--links {
+    .project__description--links,
+    .project__description--created {
         display: flex;
         justify-content: center;
     }
